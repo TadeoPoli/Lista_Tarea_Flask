@@ -156,4 +156,3 @@ Estas medidas forman parte del objetivo educativo del proyecto; no implican que 
 
 Se verificaron manualmente el registro, inicio y cierre de sesión, creación, edición y eliminación de tareas, y la separación de tareas entre dos usuarios distintos. La aplicación cuenta además con dependencias declaradas, inicialización no destructiva de tablas y configuración local mediante `.env`.
 
-`PasosPanelControl.txt` contiene instrucciones antiguas y no es necesario para instalar el proyecto: el procedimiento actual se encuentra en este README. El archivo permanece excluido de una futura publicación mediante `.gitignore`.
