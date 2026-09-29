@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} - Lista de tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="site-nav" aria-label="Navegación principal">
+        <a class="brand" href="{{ url_for('todo.index') }}">Lista de tareas</a>
+        <ul>
+            {% if g.user %}
+                <li><span>{{ g.user['username'] }}</span></li>
+                <li>
+                    <form method="post" action="{{ url_for('auth.logout') }}">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <button type="submit" class="link-button">Cerrar sesión</button>
+                    </form>
+                </li>
+            {% else %}
+                <li><a href="{{ url_for('auth.register') }}">Registrarse</a></li>
+                <li><a href="{{ url_for('auth.login') }}">Iniciar sesión</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <main class="content">
+        <header>
+            {% block header %}{% endblock %}
+        </header>
+        {% for message in get_flashed_messages() %}
+            <div class="flash" role="status">{{ message }}</div>
+        {% endfor %}
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

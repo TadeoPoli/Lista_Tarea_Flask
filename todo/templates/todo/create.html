@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Nuevo Todo{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="description">Descripción:</label>
+    <textarea name="description" id="description" maxlength="500" required>{{ description }}</textarea>
+    <input type="submit" value="Guardar">
+</form>
+{% endblock %}

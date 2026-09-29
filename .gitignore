@@ -1,0 +1,27 @@
+# Python and virtual environments
+.venv/
+.venv-test/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Operating system and editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local notes pending review before publication
+PasosPanelControl.txt

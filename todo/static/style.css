@@ -1,0 +1,49 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2933;
+    background: #f3f6f8;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+.site-nav {
+    align-items: center;
+    background: #1f4b5f;
+    color: #fff;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 1rem max(1.25rem, calc((100% - 900px) / 2));
+}
+
+.brand, .site-nav a, .link-button { color: inherit; text-decoration: none; }
+.brand { font-size: 1.2rem; font-weight: 700; }
+.site-nav ul { align-items: center; display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.site-nav form { margin: 0; }
+.link-button { background: none; border: 0; cursor: pointer; font: inherit; padding: 0; }
+.site-nav a:hover, .link-button:hover { text-decoration: underline; }
+
+.content { margin: 2rem auto; max-width: 760px; padding: 0 1.25rem; }
+.content > header { align-items: center; display: flex; justify-content: space-between; gap: 1rem; }
+.action, input[type="submit"] { background: #1f6f78; border: 0; border-radius: .3rem; color: #fff; cursor: pointer; display: inline-block; padding: .65rem .9rem; text-decoration: none; }
+.action:hover, input[type="submit"]:hover { background: #15565d; }
+.danger { background: #b23a48 !important; }
+
+form { display: grid; gap: .65rem; max-width: 560px; }
+input, textarea { border: 1px solid #b9c5cc; border-radius: .3rem; font: inherit; padding: .65rem; width: 100%; }
+textarea { min-height: 7rem; resize: vertical; }
+input[type="checkbox"] { width: auto; }
+.flash { background: #e7f5ee; border-left: 4px solid #2c7a5a; margin: 1rem 0; padding: .85rem; }
+
+.content ul { list-style: none; padding: 0; }
+.content li { background: #fff; border: 1px solid #d9e1e5; border-radius: .4rem; margin: .75rem 0; padding: 1rem; }
+.content li h1 { font-size: 1.1rem; margin: 0 0 .5rem; overflow-wrap: anywhere; }
+.about { color: #52616b; font-size: .9rem; margin-bottom: .75rem; }
+
+@media (max-width: 560px) {
+    .site-nav, .site-nav ul, .content > header { align-items: flex-start; flex-direction: column; }
+    .site-nav ul { gap: .5rem; }
+}
